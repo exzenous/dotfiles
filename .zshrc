@@ -31,11 +31,32 @@ fi
 # Source your static plugins file.
 source $zsh_plugins
 
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ZSH_HIGHLIGHT_DIRS_BLACKLIST+=(/mnt/c)
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# PATH For Ubuntu Snap
+export PATH="$PATH:/snap/bin"
+
+# Powerlevel10k: To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# PATH For Go, Pip3
+PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
+
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
+}
+compctl -K _pip_completion pip3
+
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
