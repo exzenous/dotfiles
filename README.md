@@ -1,27 +1,41 @@
+Linux
+----
 zsh
+
 antinode/oh-my-zsh
 
 kubectl
+
 helm
+
 kubectx/kubens
+
 k9s
+
 kubectl krew
 
 ansible
+
 terraform
 
 python
+
 nvm/npm/node
+
 dotnet
 
 gcloud
+
 aws-cli
+
 azure-cli
 
 Windows PowerShell
 ----
 choco
+
 scoop
+
 - gsudo
 - oh-my-posh
 
