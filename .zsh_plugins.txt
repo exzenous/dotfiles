@@ -1,0 +1,14 @@
+# frameworks like oh-my-zsh are supported
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/magic-enter
+
+romkatv/powerlevel10k
+sindresorhus/pure
+
+# some plugins support deferred loading
+mattmc3/zfunctions
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-history-substring-search kind:defer
