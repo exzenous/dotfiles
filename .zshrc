@@ -60,3 +60,9 @@ compctl -K _pip_completion pip3
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# VirtualEnvWrapper: Tested on Ubuntu 20.04 WSL Windows 10
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
