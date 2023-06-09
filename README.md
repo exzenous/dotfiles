@@ -18,6 +18,10 @@ ansible
 
 terraform
 
+terragrunt
+
+vault
+
 python
 
 nvm/npm/node
@@ -29,6 +33,33 @@ gcloud
 aws-cli
 
 azure-cli
+
+/etc/wsl.conf (same as above)
+
+```
+[boot]
+systemd=true
+```
+
+Install systemd-timesync (same as above)
+
+`sudo apt install systemd-timesyncd`
+
+The suggested edits for timesyncd did NOT work for me and resulted in failure to start the service. Instead I did the following:
+
+sudo systemctl edit systemd-timesyncd.service
+
+```
+[Unit]
+ConditionVirtualization=
+ConditionVirtualization=wsl
+```
+
+Courtesy of https://unix.stackexchange.com/a/737366/547670
+
+And start it (same as above)
+
+`sudo systemctl start systemd-timesyncd`
 
 Windows PowerShell
 ----
