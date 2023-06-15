@@ -1,11 +1,15 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+export DEFAULT_USER="$(whoami)"
+# Use this on Debian
+if [ $WSL_DISTRO_NAME=="Debian" ]
+then
+  autoload -U +X compinit && compinit && source /home/$DEFAULT_USER/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/lib/directories.zsh
+fi
+# Enable Powerlevel10k instant prompt. Should stay close to the top o/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+ source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-export DEFAULT_USER="$(whoami)"
 
 # Aliases
 alias tf='terraform'
@@ -63,6 +67,5 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # VirtualEnvWrapper: Tested on Ubuntu 20.04 WSL Windows 10
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
