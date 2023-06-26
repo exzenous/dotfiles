@@ -1,6 +1,6 @@
 export DEFAULT_USER="$(whoami)"
 # Use this on Debian
-if [ $WSL_DISTRO_NAME=="Debian" ]
+if [ ! -z $WSL_DISTRO_NAME ] && [ $WSL_DISTRO_NAME=="Debian" ]
 then
   autoload -U +X compinit && compinit && source /home/$DEFAULT_USER/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/lib/directories.zsh
 fi
