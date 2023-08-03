@@ -39,6 +39,9 @@ azure-cli
 ```
 [boot]
 systemd=true
+
+[interop]
+appendWindowsPath = false
 ```
 
 Install systemd-timesync (same as above)

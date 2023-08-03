@@ -49,7 +49,8 @@ export PATH="$PATH:/snap/bin"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # PATH For Go, Pip3
-PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
+# PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
+PATH=$PATH:/usr/local/go/bin
 
 # pip zsh completion start
 function _pip_completion {
@@ -72,3 +73,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Kuberctl Krew
 export PATH="${PATH}:${HOME}/.krew/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/exzenous/google-cloud-sdk/path.zsh.inc' ]; then . '/home/exzenous/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/exzenous/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/exzenous/google-cloud-sdk/completion.zsh.inc'; fi
