@@ -1,9 +1,12 @@
+unameOut="$(uname -s)"
 export DEFAULT_USER="$(whoami)"
+
 # Use this on Debian
 if [ ! -z $WSL_DISTRO_NAME ] && [ $WSL_DISTRO_NAME=="Debian" ]
 then
   autoload -U +X compinit && compinit && source /home/$DEFAULT_USER/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/lib/directories.zsh
 fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top o/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -18,22 +21,27 @@ alias kct='kubectl'
 alias kget='kubectl get'
 
 # Set the name of the static .zsh plugins file antidote will generate.
-zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins.zsh
+if [ $unameOut = "Darwin" ];then
+  source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+  source ~/.zsh_plugins.zsh
+else
+  zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins.zsh
 
-# Ensure you have a .zsh_plugins.txt file where you can add plugins.
-[[ -f ${zsh_plugins:r}.txt ]] || touch ${zsh_plugins:r}.txt
+  # Ensure you have a .zsh_plugins.txt file where you can add plugins.
+  [[ -f ${zsh_plugins:r}.txt ]] || touch ${zsh_plugins:r}.txt
 
-# Lazy-load antidote.
-fpath+=(${ZDOTDIR:-~}/.antidote)
-autoload -Uz $fpath[-1]/antidote
+  # Lazy-load antidote.
+  fpath+=(${ZDOTDIR:-~}/.antidote)
+  autoload -Uz $fpath[-1]/antidote
 
-# Generate static file in a subshell when .zsh_plugins.txt is updated.
-if [[ ! $zsh_plugins -nt ${zsh_plugins:r}.txt ]]; then
-  (antidote bundle <${zsh_plugins:r}.txt >|$zsh_plugins)
+  # Generate static file in a subshell when .zsh_plugins.txt is updated.
+  if [[ ! $zsh_plugins -nt ${zsh_plugins:r}.txt ]]; then
+    (antidote bundle <${zsh_plugins:r}.txt >|$zsh_plugins)
+  fi
+
+  # Source your static plugins file.
+  source $zsh_plugins
 fi
-
-# Source your static plugins file.
-source $zsh_plugins
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
