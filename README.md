@@ -4,6 +4,8 @@ zsh
 
 antinode/oh-my-zsh
 
+fzf: install via script
+
 kubectl
 
 helm

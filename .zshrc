@@ -87,3 +87,7 @@ if [ -f '/home/exzenous/google-cloud-sdk/path.zsh.inc' ]; then . '/home/exzenous
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/exzenous/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/exzenous/google-cloud-sdk/completion.zsh.inc'; fi
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS='--extended --height 80% --border --reverse'
