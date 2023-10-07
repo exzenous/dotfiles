@@ -7,6 +7,12 @@ then
   autoload -U +X compinit && compinit && source /home/$DEFAULT_USER/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/lib/directories.zsh
 fi
 
+# Use this on Red Hat/Fedora
+if [ -e /etc/redhat-release ]
+then
+  autoload -U +X compinit && compinit && source /home/$DEFAULT_USER/.cache/antidote/https-COLON--SLASH--SLASH-github.com-SLASH-ohmyzsh-SLASH-ohmyzsh/lib/directories.zsh
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top o/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
