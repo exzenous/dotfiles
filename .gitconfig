@@ -1,0 +1,13 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Nathachai
+	email = exzenous@outlook.com
+
+[includeIf "gitdir:~/Developer/Opsta/"]
+	path = .gitconfig-opsta
+
+[core]
+	excludesfiles = /home/exzenous/.gitignore_global
+[alias]
+	clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
