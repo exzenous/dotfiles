@@ -10,20 +10,22 @@ Linux
 <input type="checkbox"> oh-my-zsh | "EZ" `zsh` customizer | n/a
 <input type="checkbox"> fzf | fuzzy finder (boxed ctrl+r) ; install via script | n/a
 
-#### Programming
+#### Programming & Tools
 |Tool|Description/Additional Notes|Specific Version|
 --|--|--
 <input type="checkbox"> python | n/a | n/a
 <input type="checkbox"> nvm/npm/node | n/a | n/a
 <input type="checkbox"> dotnet | n/a | n/a
 <input type="checkbox"> go | n/a | n/a
+<input type="checkbox"> neovim | Neovim | n/a
+<input type="checkbox"> lazyvim | Extends Neovim | n/a
 
 #### Infrasture
 |Tool|Description/Additional Notes|Specific Version|
 --|--|--
-<input type="checkbox"> aws-cli | n/a | n/a
-<input type="checkbox"> azure-cli | n/a | n/a
-<input type="checkbox"> gcloud | n/a | n/a
+<input type="checkbox"> aws | aws-cli | n/a
+<input type="checkbox"> az | azure-cli | n/a
+<input type="checkbox"> gcloud | gcloud-cli | n/a
 
 #### Kubernetes
 |Tool|Description/Additional Notes|Specific Version|
@@ -40,6 +42,20 @@ Linux
 <input type="checkbox"> terraform | Terraform Cli (IaC) | 1.5.7
 <input type="checkbox"> terragrunt | Terraform Wrapper (IaC) | n/a
 <input type="checkbox"> vault | HashiCorp Vault Cli | n/a
+
+Full Linux Desktop
+---
+
+#### Shell Experience
+
+|Tool|Description/Additional Notes|Specific Version|
+--|--|--
+<input type="checkbox"> sway | Titling Windows Manager | n/a
+<input type="checkbox"> Sway Extensions | `waybar`, `dmenu`, `foot` | n/a
+<input type="checkbox"> terminator | minimal terminal | n/a
+<input type="checkbox"> xf86-input-vmmouse | For VMs; Missing Mouse Cursor fix | n/a
+<input type="checkbox"> build-essential | (Fedora; `make` `automake` `gcc` `gcc-c++` `kernel-devel`) | n/a
+
 
 Windows Subsystem Linux (WSL)
 ---
