@@ -81,9 +81,9 @@ compctl -K _pip_completion pip3
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # VirtualEnvWrapper: Tested on Ubuntu 20.04 WSL Windows 10
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-source /usr/local/bin/virtualenvwrapper.sh
+# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+# export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # Kuberctl Krew
 export PATH="${PATH}:${HOME}/.krew/bin"

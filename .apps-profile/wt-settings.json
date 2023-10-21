@@ -33,7 +33,7 @@
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": true,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
     "initialCols": 100,
     "initialRows": 30,
     "newTabMenu": 
@@ -51,6 +51,56 @@
         "list": 
         [
             {
+                "adjustIndistinguishableColors": "always",
+                "antialiasingMode": "cleartype",
+                "backgroundImage": "C:\\Users\\Nathachai\\OneDrive - Exz-Cloud Co.,Ltd\\Documents\\Windows Terminal\\image.3355766613.3742.png",
+                "backgroundImageAlignment": "right",
+                "backgroundImageOpacity": 0.07,
+                "backgroundImageStretchMode": "uniform",
+                "bellStyle": "window",
+                "colorScheme": "One Half Dark",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "face": "JetBrainsMonoNL Nerd Font Propo",
+                    "size": 11.0
+                },
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "intenseTextStyle": "bright",
+                "name": "PowerShell",
+                "opacity": 85,
+                "padding": "20",
+                "source": "Windows.Terminal.PowershellCore",
+                "useAcrylic": true,
+                "useAtlasEngine": true
+            },
+            {
+                "adjustIndistinguishableColors": "always",
+                "antialiasingMode": "cleartype",
+                "backgroundImage": "C:\\Users\\Nathachai\\OneDrive - Exz-Cloud Co.,Ltd\\Documents\\Windows Terminal\\image.3355766613.3742.png",
+                "backgroundImageAlignment": "right",
+                "backgroundImageOpacity": 0.07,
+                "backgroundImageStretchMode": "uniform",
+                "bellStyle": "window",
+                "colorScheme": "One Half Dark",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "cursorShape": "vintage",
+                "font": 
+                {
+                    "face": "JetBrainsMonoNL Nerd Font Propo",
+                    "size": 11.0
+                },
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "intenseTextStyle": "bright",
+                "name": "Windows PowerShell",
+                "opacity": 85,
+                "padding": "20",
+                "useAcrylic": true,
+                "useAtlasEngine": true
+            },
+            {
                 "altGrAliasing": false,
                 "antialiasingMode": "cleartype",
                 "backgroundImage": "C:\\Users\\Nathachai\\OneDrive - Exz-Cloud Co.,Ltd\\Documents\\Windows Terminal\\image.3355766613.3742.png",
@@ -65,11 +115,12 @@
                     "face": "JetBrainsMonoNL Nerd Font Propo",
                     "size": 11.0
                 },
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+                "guid": "{aa8efdb5-3cbe-50b2-a332-9203dc1ee217}",
                 "hidden": false,
-                "icon": "C:/Users/Nathachai/OneDrive/Documents/Windows Terminal/archlinux.ico",
-                "name": "Arch",
+                "icon": "C:\\Personalisation\\Icons\\Fedora_icon_2021.png",
+                "name": "Fedora",
                 "opacity": 93,
+                "padding": "20",
                 "source": "Windows.Terminal.Wsl",
                 "suppressApplicationTitle": false,
                 "useAcrylic": true,
@@ -90,92 +141,16 @@
                     "face": "JetBrainsMonoNL Nerd Font Propo",
                     "size": 11.0
                 },
-                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "icon": "C:\\Personalisation\\Icons\\ubuntu-logo32.png",
                 "intenseTextStyle": "bright",
                 "name": "Ubuntu",
                 "opacity": 80,
-                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
+                "padding": "20",
+                "source": "Windows.Terminal.Wsl",
                 "useAcrylic": true,
                 "useAtlasEngine": true
-            },
-            {
-                "antialiasingMode": "cleartype",
-                "backgroundImage": "C:\\Users\\Nathachai\\OneDrive - Exz-Cloud Co.,Ltd\\Documents\\Windows Terminal\\image.3355766613.3742.png",
-                "backgroundImageAlignment": "right",
-                "backgroundImageOpacity": 0.07,
-                "backgroundImageStretchMode": "uniform",
-                "bellStyle": "window",
-                "colorScheme": "One Half Dark",
-                "cursorShape": "vintage",
-                "font": 
-                {
-                    "face": "JetBrainsMonoNL Nerd Font Propo",
-                    "size": 11.0
-                },
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "hidden": false,
-                "intenseTextStyle": "bright",
-                "name": "PowerShell",
-                "opacity": 85,
-                "padding": "5, 5, 5, 5",
-                "source": "Windows.Terminal.PowershellCore",
-                "useAcrylic": true,
-                "useAtlasEngine": true
-            },
-            {
-                "colorScheme": "Tango Dark",
-                "commandline": "%SystemRoot%\\System32\\cmd.exe",
-                "cursorShape": "vintage",
-                "font": 
-                {
-                    "face": "JetBrainsMonoNL Nerd Font Propo",
-                    "size": 11.0
-                },
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "Command Prompt",
-                "opacity": 75,
-                "padding": "5, 5, 5, 5",
-                "useAcrylic": true
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{95d4bff8-82f0-5e1f-87a7-52f894995f0b}",
-                "hidden": true,
-                "name": "Developer Command Prompt for VS 2022 [Preview]",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{b82916f4-cbb9-514c-afec-aa21f4f8014f}",
-                "hidden": false,
-                "name": "Developer PowerShell for VS 2022 [Preview]",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": true,
-                "name": "Windows PowerShell"
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": true,
-                "icon": "C:\\Personalisation\\Icons\\ubuntu-logo32.png",
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
-                "hidden": true,
-                "name": "Visual Studio Debug Console",
-                "source": "VSDebugConsole"
             },
             {
                 "altGrAliasing": false,
@@ -186,22 +161,48 @@
                 "backgroundImageStretchMode": "uniform",
                 "bellStyle": "window",
                 "colorScheme": "One Half Light",
-                "commandline": "ubuntu.exe",
+                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu",
                 "cursorShape": "vintage",
                 "font": 
                 {
                     "face": "JetBrainsMonoNL Nerd Font Propo",
                     "size": 11.0
                 },
-                "guid": "{537fbeb2-8fcb-41d9-8a5a-db9bbd0f3dd9}",
+                "guid": "{94829e28-d63b-48bb-9ced-6969e3f7f69f}",
                 "hidden": false,
                 "icon": "C:\\Personalisation\\Icons\\ubuntu-logo32.png",
                 "intenseTextStyle": "bright",
                 "name": "Ubuntu (Presentation)",
                 "opacity": 80,
+                "padding": "20",
+                "startingDirectory": "~",
                 "tabTitle": "Ubuntu",
                 "useAcrylic": true,
                 "useAtlasEngine": true
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{801ff6b6-ef1b-5231-844f-c6fc999997e2}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{73b5cd3a-0304-5232-b096-1797782b675c}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": true,
+                "name": "Command Prompt"
             }
         ]
     },
