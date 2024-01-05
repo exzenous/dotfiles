@@ -4,7 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-font pango: 'JetBrains Mono Nerd Font' 11 
+font pango: 'JetBrains Mono Nerd Font' 10 
 
 ### Variables
 #
@@ -25,7 +25,8 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/gnome/keys-l.webp fill
+# output * bg /usr/share/backgrounds/gnome/keys-l.webp fill
+output * bg /home/exzenous/Pictures/Wallpapers/sony_vaio.png fill
 #
 # Example configuration:
 #
@@ -52,7 +53,13 @@ output Virtual-1 scale 1.75
 
 ### Input configuration
 #
-
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+        dwt enabled
+        tap enabled
+        natural_scroll enabled
+        accel_profile "adaptive"
+	scroll_factor 0.3 
+}
 input "type:keyboard" {
 	xkb_layout us,th
 	xkb_options grp:win_space_toggle
