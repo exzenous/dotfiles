@@ -1,0 +1,12 @@
+[font.normal]
+family = "JetBrains Mono Nerd Font"
+style = "Regular"
+
+
+[window]
+opacity = 0.8
+
+[window.padding]
+x = 15
+y = 15
+

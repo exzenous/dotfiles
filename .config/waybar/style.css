@@ -1,15 +1,16 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: 'Droid Sans','JetBrains Mono Nerd Font', FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
+    border-radius: 2px;
 }
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    border-top: 4px solid rgba(100, 114, 125, 0.8);
     color: #ffffff;
     transition-property: background-color;
-    transition-duration: .5s;
+    transition-duration: 1s;
 }
 
 window#waybar.hidden {
@@ -49,9 +50,12 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    margin: 5px 2px 5px 2px;
+    padding: 0px 0.5rem;
     background-color: transparent;
     color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 2px;
 }
 
 #workspaces button:hover {
@@ -67,7 +71,10 @@ button:hover {
     background-color: #eb4d4b;
 }
 
-#mode {
+#submap {
+    margin: 10px 10px 5px 0px;
+    padding: 0px 0.5rem;
+    border: 1px solid rgba(255,255,255,0.5);
     background-color: #64727D;
     border-bottom: 3px solid #ffffff;
 }
@@ -87,38 +94,37 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#mpd {
-    padding: 0 10px;
+#mpd,
+#language {
+    background-color: rgba(100,100,100,0);
     color: #ffffff;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    padding: 0px 1.2rem;
+    margin: 10px 0.25rem 6px 0.25rem;
 }
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0.3rem 5px 0px 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+    margin-left: 5px;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+    margin-right: 5px;
 }
 
 #clock {
-    background-color: #64727D;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
 }
 
 @keyframes blink {
@@ -143,38 +149,27 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
 }
 
 #memory {
-    background-color: #9b59b6;
 }
 
 #disk {
-    background-color: #964B00;
 }
 
 #backlight {
-    background-color: #90b1b1;
 }
 
 #network {
-    background-color: #2980b9;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
 }
 
 #wireplumber {
@@ -197,19 +192,15 @@ label:focus {
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature {
-    background-color: #f0932b;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
 }
 
 #tray {
-    background-color: #2980b9;
 }
 
 #tray > .passive {
@@ -248,11 +239,7 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
+    min-width: 3.5em;
 }
 
 #keyboard-state {

@@ -12,7 +12,7 @@ gaps inner 5
 smart_borders no_gaps
 smart_gaps on
 
-client.focused #8a8a8a #134980 #ffffff #adadad #134980
+client.focused #8a8a8a #0f668a #ffffff #adadad #0f668a
 
 ### Variables
 #
@@ -35,7 +35,7 @@ set $menu rofi -show run
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/gnome/keys-l.webp fill
-output * bg /home/exzenous/Pictures/Wallpapers/sony_vaio.png fill
+output * bg /home/exzenous/Pictures/Wallpapers/default.jpg fill
 #
 # Example configuration:
 #
