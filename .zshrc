@@ -25,6 +25,9 @@ alias tf='terraform'
 alias mnk='minikube'
 alias kct='kubectl'
 alias kget='kubectl get'
+alias azi='az interactive'
+alias gvg='grep -v grep'
+alias tgt='terragrunt'
 
 # Set the name of the static .zsh plugins file antidote will generate.
 if [ $unameOut = "Darwin" ];then
