@@ -1,3 +1,7 @@
+# Set Variables
+export EDITOR=vim
+export KUBE_EDITOR=vim
+
 unameOut="$(uname -s)"
 export DEFAULT_USER="$(whoami)"
 
@@ -23,11 +27,13 @@ fi
 # Aliases
 alias tf='terraform'
 alias mnk='minikube'
-alias kct='kubectl'
 alias kget='kubectl get'
 alias azi='az interactive'
 alias gvg='grep -v grep'
-alias tgt='terragrunt'
+alias trg='terragrunt'
+alias k="kubectl"
+alias dk="docker"
+alias dkb="docker build ."
 
 # Set the name of the static .zsh plugins file antidote will generate.
 if [ $unameOut = "Darwin" ];then
@@ -119,3 +125,9 @@ eval "$(pyenv virtualenv-init -)"
 
 # add Pulumi to the PATH
 export PATH=$PATH:$HOME/.pulumi/bin
+
+# NEOVIM
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
+# BREW.SH
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
