@@ -4,9 +4,8 @@
 	name = Nathachai
 	email = exzenous@outlook.com
 
-[includeIf "gitdir:~/Developer/Opsta/"]
+[includeIf "gitdir:~/Developer/OpstaThailandCoLtd/"]
 	path = .gitconfig-opsta
-
 [core]
 	excludesfiles = /home/exzenous/.gitignore_global
 [alias]
