@@ -8,6 +8,7 @@ romkatv/powerlevel10k
 sindresorhus/pure
 
 # some plugins support deferred loading
-# mattmc3/zfunctions
-zsh-users/zsh-autosuggestions kind:defer
+mattmc3/zfunctions
+zsh-users/zsh-autosuggestions
+chitoku-k/fzf-zsh-completions
 zsh-users/zsh-history-substring-search kind:defer

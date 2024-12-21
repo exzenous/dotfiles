@@ -3,11 +3,9 @@
 [user]
 	name = Nathachai
 	email = exzenous@outlook.com
-
-[includeIf "gitdir:~/Developer/Opsta/"]
-	path = .gitconfig-opsta
-
+[includeIf "gitdir:~/Developer/"]
+	path = ~/.gitconfig.work
 [core]
-	excludesfiles = /home/exzenous/.gitignore_global
+	excludesfiles = ~/.gitignore.global
 [alias]
 	clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
