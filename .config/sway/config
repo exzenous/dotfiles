@@ -4,7 +4,15 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-font pango: 'JetBrains Mono Nerd Font' 11 
+font pango: 'JetBrains Mono Nerd Font' 10 
+
+gaps outer 8
+gaps inner 5
+
+smart_borders no_gaps
+smart_gaps on
+
+client.focused #8a8a8a #0f668a #ffffff #adadad #0f668a
 
 ### Variables
 #
@@ -20,18 +28,17 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu rofi -show run 
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/gnome/keys-l.webp fill
+# output * bg /usr/share/backgrounds/gnome/keys-l.webp fill
+output * bg /home/exzenous/Pictures/Wallpapers/default.jpg fill
 #
 # Example configuration:
 #
-
-# Surface Book 2 Fedora VM
-output Virtual-1 scale 1.75
 
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
@@ -52,7 +59,14 @@ output Virtual-1 scale 1.75
 
 ### Input configuration
 #
-
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+        dwt enabled
+        tap enabled
+        natural_scroll enabled
+        accel_profile "adaptive"
+	scroll_factor 0.3 
+        click_method clickfinger
+}
 input "type:keyboard" {
 	xkb_layout us,th
 	xkb_options grp:win_space_toggle
@@ -146,6 +160,12 @@ input "type:keyboard" {
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
+bindgesture swipe:left workspace prev
+bindgesture swipe:right workspace next
+
+bindsym $mod+shift+b border toggle
+
 #
 # Layout stuff:
 #
