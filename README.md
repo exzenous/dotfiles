@@ -6,6 +6,8 @@ Linux
 |Tool|Description/Additional Notes|Specific Version|
 --|--|--
 <input type="checkbox"> zsh | n/a | n/a
+<input type="checkbox"> fish | n/a | n/a
+<input type="checkbox"> fisher | n/a | n/a
 <input type="checkbox"> antinode | `zsh` Plugin Manager | n/a
 <input type="checkbox"> oh-my-zsh | "EZ" `zsh` customizer | n/a
 <input type="checkbox"> fzf | fuzzy finder (boxed ctrl+r) ; install via script | n/a
@@ -56,6 +58,11 @@ Full Linux Desktop
 <input type="checkbox"> xf86-input-vmmouse | For VMs; Missing Mouse Cursor fix | n/a
 <input type="checkbox"> build-essential | (Fedora; `make` `automake` `gcc` `gcc-c++` `kernel-devel`) | n/a
 
+#### I use arch, btw..
+
+|Tool|Description/Additional Notes|Specific Version|
+--|--|--
+<input type="checkbox"> paru | AUR Helper | n/a
 
 Windows Subsystem Linux (WSL)
 ---
