@@ -1,9 +1,17 @@
+# For zsh subshells, add to ~/.zshrc.
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
+
 # Set Variables
 export EDITOR=vim
 export KUBE_EDITOR=vim
 
 unameOut="$(uname -s)"
 export DEFAULT_USER="$(whoami)"
+
+# Starship
+if [[ ! -z $(which starship) ]];then
+  eval "$(starship init zsh)"
+fi
 
 # Use this on Debian
 if [ ! -z $WSL_DISTRO_NAME ] && [ $WSL_DISTRO_NAME=="Debian" ]
@@ -131,3 +139,5 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # BREW.SH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+. "$HOME/.local/bin/env"
