@@ -30,6 +30,7 @@
 |Tool|Description/Additional Notes|Specific Version|
 --|--|--
 <input type="checkbox"> `paru` | AUR Helper | n/a
+<input type="checkbox"> `shadow` | newuidmap: Could not set caps Fix | n/a
 
 #### Infrastructure
 |Tool|Description/Additional Notes|Specific Version|
