@@ -4,7 +4,6 @@ ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/magic-enter
 
-romkatv/powerlevel10k
 sindresorhus/pure
 
 # some plugins support deferred loading
