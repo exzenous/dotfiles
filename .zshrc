@@ -31,7 +31,7 @@ ZSH_MANUAL_CONFIGS() {
 ZSH_HIGHLIGHT_DIRS_BLACKLIST+=(/mnt/c)
 
 # Hybrid Setup: Starship or ZSH/Antidote
-if [[ ! -z $(which starship) ]]; then
+if [[ ! -z $(command -v starship) ]]; then
   eval "$(starship init zsh)"
   ZSH_MANUAL_CONFIGS
 else
