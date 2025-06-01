@@ -8,6 +8,8 @@ export UNAME_KERNEL_NAME="$(uname -s)"
 printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
 
 # Aliases
+alias ll='ls -l'
+alias lll='ls -lah'
 alias cls='clear'
 alias gvg='grep -v grep'
 
@@ -24,6 +26,7 @@ alias dk="docker"
 alias dkb="docker build ."
 
 ZSH_MANUAL_CONFIGS() {
+  bindkey -e
   bindkey "^[[3~" delete-char
 }
 
