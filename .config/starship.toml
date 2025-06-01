@@ -1,52 +1,130 @@
 ## Courtesy of mattmc3: https://github.com/starship/starship/discussions/1107 
 
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """\
+[❯─╴](fg:arrow)\
+$username\
+$os\
+$git_branch\
+$git_status\
+$git_metrics\
+$cmd_duration\
+(\
+    via \
+    $python\
+    $conda\
+    $nodejs\
+    $c\
+    $rust\
+    $java\
+)
+[ ╰─](fg:arrow)(\
+    dir: \
+    $directory\
+)\
+$character\
+"""
+
+right_format = """
+$status
+"""
+
 # prezto.toml
 add_newline = false
 
-# A minimal left prompt
-format = """$python$directory$character"""
+palette = "normal"
 
-# move the rest of the prompt to the right
-right_format = """$status$all"""
+[palettes.normal]
+arrow = "#333533"
+os = "#16f4d0"
+os_admin = "#e4ff1a"
+directory = "#9ffff5"
+time = "#bdfffd"
+node = "#a5e6ba"
+git = "#f17f29"
+git_status = "#DFEBED"
+python = "#edf67d"
+conda = "#70e000"
+java = "#F86279"
+rust = "#ffdac6"
+clang = "#caf0f8"
+duration = "#ce4257"
+text_color = "#EDF2F4"
+text_light = "#26272A"
 
 [character]
 success_symbol = "[❯](red)[❯](yellow)[❯](green)"
 error_symbol = "[❯](red)[❯](yellow)[❯](green)"
 vicmd_symbol = "[❮](green)[❮](yellow)[❮](red)"
 
-[git_branch]
-format = '[$branch]($style) '
-style = 'bold green'
+[username]
+show_always = true
+style_user = 'os'
+style_root = 'bold os_admin'
+format = '|[󰮐 $user](fg:$style)| '
+disabled = false
 
-[python]
-format = '\($virtualenv\) '
+[os]
+format = "on [($symbol $type)]($style) "
+style = "blue"
+disabled = false
 
-[git_status]
-format = '$all_status$ahead_behind '
-ahead = '[⬆](bold purple) '
-behind = '[⬇](bold purple) '
-staged = '[✚](green) '
-deleted = '[✖](red) '
-renamed = '[➜](purple) '
-stashed = '[✭](cyan) '
-untracked = '[◼](white) '
-modified = '[✱](blue) '
-conflicted = '[═](yellow) '
-diverged = '⇕ '
-up_to_date = ''
+# This is the default symbols table.
+[os.symbols]
+Alpine = " "
+Arch = " "
+Debian = " "
+EndeavourOS = " "
+Fedora = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mint = " "
+NixOS = " "
+openSUSE = " "
+Pop = " "
+SUSE = " "
+Ubuntu = " "
+Windows = " "
 
 [directory]
-style = "blue"
-truncation_length = 1
-truncation_symbol = ""
-fish_style_pwd_dir_length = 1
+format = "[$path](bold $style)[$read_only]($read_only_style) "
+style = "fg:directory"
+read_only_style = "fg:directory"
+before_repo_root_style = "fg:directory"
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only ="  "
 
-[cmd_duration]
-format = '[$duration]($style) '
+[git_branch]
+format = "via [$symbol $branch]($style) "
+style = "bold git"
+symbol = " "
 
-[line_break]
-disabled = true
+[git_status]
+format = '[$all_status$ahead_behind]($style)'
+style = "fg:text_color"
+ahead = '[ ⬆ ](bg:git)'
+behind = '[ ⬇ ](bg:git)'
+staged = '[ ✚ ](bg:git)'
+deleted = '[ ✖ ](bg:git)'
+renamed = '[ ➜ ](bg:git)'
+stashed = '[ ✭ ](bg:git)'
+untracked = '[ ◼ ](bg:git)'
+modified = '[ ✱ ](bg:git)'
+conflicted = '[ ═ ](bg:git)'
+diverged = '[ ⇕ ](bg:git)'
+up_to_date = '[ 󰄳 ](fg:green)'
+
+[git_metrics]
+disabled = false
+format = ' ([+$added]($added_style) )([-$deleted]($deleted_style) ) '
 
 [status]
 disabled = false
 symbol = '✘ '
+
+[line_break]
+disabled = true
