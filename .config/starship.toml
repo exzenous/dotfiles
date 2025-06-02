@@ -1,4 +1,5 @@
 ## Courtesy of mattmc3: https://github.com/starship/starship/discussions/1107 
+## Courtesy of TaouMou: https://github.com/TaouMou/starship-presets/blob/main/starship_text.toml
 
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
@@ -10,25 +11,35 @@ $os\
 $git_branch\
 $git_status\
 $git_metrics\
-$cmd_duration\
 (\
-    via \
+    $package\
     $python\
     $conda\
     $nodejs\
     $c\
     $rust\
     $java\
+    $terraform\
+    $helm\
+)\
+(
+[ ╰─](fg:arrow)\
+    $kubernetes\
+    $aws\
+    $azure\
+    $gcloud\
 )
 [ ╰─](fg:arrow)(\
     dir: \
     $directory\
 )\
+$cmd_duration\
+$status\
 $character\
 """
 
 right_format = """
-$status
+
 """
 
 # prezto.toml
@@ -54,10 +65,17 @@ duration = "#ce4257"
 text_color = "#EDF2F4"
 text_light = "#26272A"
 
+[status]
+disabled = false
+symbol = ' '
+
+[line_break]
+disabled = true
+
 [character]
-success_symbol = "[❯](red)[❯](yellow)[❯](green)"
-error_symbol = "[❯](red)[❯](yellow)[❯](green)"
-vicmd_symbol = "[❮](green)[❮](yellow)[❮](red)"
+success_symbol = "[❯](red)[❯](yellow)[❯ 󰥻](green) "
+error_symbol = "[❮](red)[❮](yellow)[❮](green) "
+vicmd_symbol = "[❯](green)[❯](yellow)[❯ 󰘳](red) "
 
 [username]
 show_always = true
@@ -98,6 +116,10 @@ truncation_symbol = "…/"
 truncate_to_repo = true
 read_only ="  "
 
+[cmd_duration]
+show_milliseconds = true
+format = '+took [$duration]($style)+ '
+
 [git_branch]
 format = "via [$symbol $branch]($style) "
 style = "bold git"
@@ -122,9 +144,24 @@ up_to_date = '[ 󰄳 ](fg:green)'
 disabled = false
 format = ' ([+$added]($added_style) )([-$deleted]($deleted_style) ) '
 
-[status]
-disabled = false
-symbol = '✘ '
+[package]
+format = '>[$symbol$version]($style) '
 
-[line_break]
+[aws]
+format = 'on: [$symbol($profile )(\($region\) )]($style)'
+style = 'bold blue'
+symbol = '🅰 '
+[aws.region_aliases]
+ap-southeast-2 = 'au'
+us-east-1 = 'va'
+
+[gcloud]
+format = 'GCP: [$project]($style) '
 disabled = true
+
+[kubernetes]
+disabled = true
+format = '$cluster'
+
+[terraform]
+format = '[󱁢 $workspace]($style) '
