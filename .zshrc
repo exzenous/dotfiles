@@ -70,7 +70,7 @@ export PATH=$PATH:$HOME/.local/bin/env
 export PATH="$PATH:/snap/bin"
 
 # kubectl krew
-export PATH="${PATH}:${HOME}/.krew/bin"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -78,3 +78,10 @@ export FZF_DEFAULT_OPTS='--extended --height 80% --border --reverse'
 
 # Pulumi to the PATH
 export PATH=$PATH:$HOME/.pulumi/bin
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/exzenous/.lmstudio/bin"
+# End of LM Studio CLI section
+
+# Distillery
+export PATH=$HOME/.distillery/bin:$PATH

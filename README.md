@@ -13,6 +13,8 @@
 <input type="checkbox"> `fzf` | fuzzy finder (boxed ctrl+r) ; install via script | n/a
 <input type="checkbox"> `build-essential` | Only on Debian-based Linux | n/a
 <input type="checkbox"> `make` `automake` `gcc` `gcc-c++` `kernel-devel` | `build-essential` for Fedora (RPM-based) | n/a
+<input type="checkbox"> `brew` | brew.sh | n/a
+<input type="checkbox"> `distillery` | like homebrew but with less fizz | n/a
 
 #### Programming & Tools
 |Tool|Description/Additional Notes|Specific Version|
