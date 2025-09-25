@@ -3,6 +3,7 @@ export EDITOR=vim
 export KUBE_EDITOR=vim
 export DEFAULT_USER=$(whoami)
 export UNAME_KERNEL_NAME="$(uname -s)"
+export HISTFILE=$HOME/.zsh_history # path to the history file
 
 # Warp Terminal: For zsh subshells, add to ~/.zshrc.
 printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
@@ -85,3 +86,6 @@ export PATH="$PATH:/Users/exzenous/.lmstudio/bin"
 
 # Distillery
 export PATH=$HOME/.distillery/bin:$PATH
+
+# Linux Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
