@@ -4,8 +4,6 @@ ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/magic-enter
 
-sindresorhus/pure
-
 # some plugins support deferred loading
 mattmc3/zfunctions
 zsh-users/zsh-autosuggestions
