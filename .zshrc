@@ -3,7 +3,6 @@ export EDITOR=vim
 export KUBE_EDITOR=vim
 export DEFAULT_USER=$(whoami)
 export UNAME_KERNEL_NAME="$(uname -s)"
-export HISTFILE=$HOME/.zsh_history # path to the history file
 
 # Warp Terminal: For zsh subshells, add to ~/.zshrc.
 printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
@@ -34,30 +33,28 @@ ZSH_MANUAL_CONFIGS() {
 # ZSH: Blacklist for Windows Drive
 ZSH_HIGHLIGHT_DIRS_BLACKLIST+=(/mnt/c)
 
-# Hybrid Setup: Starship or ZSH/Antidote
-if [[ ! -z $(command -v starship) ]]; then
-  eval "$(starship init zsh)"
-  ZSH_MANUAL_CONFIGS
-else
-  # Antidote: Ultra high performance install
-  # Set the root name of the plugins files (.txt and .zsh) antidote will use.
-  zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
+source '/usr/share/zsh-antidote/antidote.zsh'
 
-  # Ensure the .zsh_plugins.txt file exists so you can add plugins.
-  [[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
+# Set the root name of the plugins files (.txt and .zsh) antidote will use.
+zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
 
-  # Lazy-load antidote from its functions directory.
-  fpath=(/path/to/antidote/functions $fpath)
-  autoload -Uz antidote
+# Ensure the .zsh_plugins.txt file exists so you can add plugins.
+[[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
 
-  # Generate a new static file whenever .zsh_plugins.txt is updated.
-  if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
-    antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
-  fi
+# Lazy-load antidote from its functions directory.
+fpath=(/path/to/antidote/functions $fpath)
+autoload -Uz antidote
 
-  # Source your static plugins file.
-  source ${zsh_plugins}.zsh
+# Generate a new static file whenever .zsh_plugins.txt is updated.
+if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
+  antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
 fi
+
+# Source your static plugins file.
+source ${zsh_plugins}.zsh
+
+# Starship
+eval "$(starship init zsh)"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
