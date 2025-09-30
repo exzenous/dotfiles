@@ -5,7 +5,7 @@ ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh path:plugins/magic-enter
 
 # some plugins support deferred loading
-mattmc3/zfunctions
-zsh-users/zsh-autosuggestions
-chitoku-k/fzf-zsh-completions
-zsh-users/zsh-history-substring-search kind:defer
+# mattmc3/zfunctions
+# zsh-users/zsh-autosuggestions
+# chitoku-k/fzf-zsh-completions
+# zsh-users/zsh-history-substring-search kind:defer

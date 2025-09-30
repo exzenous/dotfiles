@@ -1,3 +1,5 @@
+autoload -U +X compinit && compinit
+
 # Set Variables
 export EDITOR=vim
 export KUBE_EDITOR=vim
@@ -86,3 +88,9 @@ export PATH=$HOME/.distillery/bin:$PATH
 
 # Linux Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# ASDF
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# gcloud-cli PATH on Arch Linux (WSL) and Windows
+export PATH="/opt/google-cloud-cli/bin:$PATH"
