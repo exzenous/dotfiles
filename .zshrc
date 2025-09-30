@@ -35,7 +35,10 @@ ZSH_MANUAL_CONFIGS() {
 # ZSH: Blacklist for Windows Drive
 ZSH_HIGHLIGHT_DIRS_BLACKLIST+=(/mnt/c)
 
+# Antidote with Pacman
 source '/usr/share/zsh-antidote/antidote.zsh'
+# Antidote with Git
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
 # Set the root name of the plugins files (.txt and .zsh) antidote will use.
 zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
