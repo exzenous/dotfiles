@@ -47,7 +47,7 @@ zsh_plugins=${ZDOTDIR:-~}/.zsh_plugins
 [[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
 
 # Lazy-load antidote from its functions directory.
-fpath=(/path/to/antidote/functions $fpath)
+fpath=(/${ZDOTDIR:-~}/.antidote/functions $fpath)
 autoload -Uz antidote
 
 # Generate a new static file whenever .zsh_plugins.txt is updated.
@@ -66,9 +66,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Python/UV
-export PATH=$PATH:$HOME/.local/bin/env
-
 # Ubuntu Snap: Add to PATH
 export PATH="$PATH:/snap/bin"
 
@@ -76,7 +73,8 @@ export PATH="$PATH:/snap/bin"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 export FZF_DEFAULT_OPTS='--extended --height 80% --border --reverse'
 
 # Pulumi to the PATH
@@ -90,10 +88,23 @@ export PATH="$PATH:/Users/exzenous/.lmstudio/bin"
 export PATH=$HOME/.distillery/bin:$PATH
 
 # Linux Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
 # ASDF
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # gcloud-cli PATH on Arch Linux (WSL) and Windows
 export PATH="/opt/google-cloud-cli/bin:$PATH"
+
+# Auto-Warpify
+[[ "$-" == *i* ]] && printf 'P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh", "uname": "Linux" }}œ' 
+
+# bun completions
+[ -s "/home/t0shikii/.bun/_bun" ] && source "/home/t0shikii/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Python/UV
+. "$HOME/.local/bin/env"

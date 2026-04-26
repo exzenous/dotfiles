@@ -1,11 +1,34 @@
+# .zsh_plugins.txt - comments begin with "#"
+
+# Basic Zsh plugins are defined in user/repo format
+# jeffreytse/zsh-vi-mode
+
 # frameworks like oh-my-zsh are supported
-ohmyzsh/ohmyzsh path:lib
-ohmyzsh/ohmyzsh path:plugins/extract
-ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+getantidote/use-omz        # handle OMZ dependencies
+ohmyzsh/ohmyzsh path:lib   # load OMZ's library
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages  # load OMZ plugins
 ohmyzsh/ohmyzsh path:plugins/magic-enter
 
-# some plugins support deferred loading
-# mattmc3/zfunctions
-# zsh-users/zsh-autosuggestions
-# chitoku-k/fzf-zsh-completions
-# zsh-users/zsh-history-substring-search kind:defer
+romkatv/powerlevel10k kind:fpath
+
+# .zsh_plugins.txt
+# pick only the plugins you want and remove the rest
+# mattmc3/zephyr path:plugins/color
+# mattmc3/zephyr path:plugins/completion
+# mattmc3/zephyr path:plugins/compstyle
+# mattmc3/zephyr path:plugins/confd
+# mattmc3/zephyr path:plugins/directory
+# mattmc3/zephyr path:plugins/editor
+# mattmc3/zephyr path:plugins/environment
+# mattmc3/zephyr path:plugins/history
+# mattmc3/zephyr path:plugins/homebrew
+# mattmc3/zephyr path:plugins/macos
+# mattmc3/zephyr path:plugins/prompt
+# mattmc3/zephyr path:plugins/utility
+# mattmc3/zephyr path:plugins/zfunctions
+
+# popular fish-like plugins
+mattmc3/zfunctions
+zsh-users/zsh-autosuggestions kind:defer
+# zdharma-continuum/fast-syntax-highlighting kind:defer
+# zsh-users/zsh-history-substring-search
