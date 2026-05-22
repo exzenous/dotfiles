@@ -15,7 +15,7 @@ alias lll='ls -lah'
 alias cls='clear'
 alias gvg='grep -v grep'
 
-alias tf='terraform'
+alias tf='tofu'
 alias trg='terragrunt'
 
 alias azi='az interactive'
