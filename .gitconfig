@@ -5,6 +5,8 @@
 	email = exzenous@outlook.com
 [includeIf "gitdir:~/Developer/"]
 	path = ~/.gitconfig.work
+[includeIf "gitdir:/mnt/z/"]
+        path = ~/.gitconfig.work
 [core]
 	excludesfiles = ~/.gitignore.global
 [alias]
